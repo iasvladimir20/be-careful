@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vf4-Dt-188">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BhI-sU-ogs">
+            <objects>
+                <tabBarController id="vf4-Dt-188" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LyI-f0-mg3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.003296567593" green="0.1033158973" blue="0.21127814049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WHa-ew-TbH"/>
+                        <segue destination="duc-ny-drc" kind="relationship" relationship="viewControllers" id="Obu-c3-33S"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNz-VC-BH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1216" y="8"/>
+        </scene>
+        <!--Bluetooth-->
+        <scene sceneID="bf0-yB-plR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Bluetooth" id="duc-ny-drc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9jd-Zd-Mrv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rco-Dp-IDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Bluetooth" id="oBZ-g6-LWC"/>
+            </objects>
+            <point key="canvasLocation" x="-299" y="-221"/>
+        </scene>
+        <!--Inicio-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="BeCareful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recomendaciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBJ-bT-fDr">
+                                <rect key="frame" x="30" y="40" width="354" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="iXl-8Z-N1w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qoN-tV-nSi">
+                                <rect key="frame" x="0.0" y="105" width="414" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecomendationsCell" rowHeight="96" id="fkj-sb-69p" customClass="RecomendationsTableViewCell" customModule="BeCareful" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fkj-sb-69p" id="Lfe-Lx-Olg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coverageMedicines" translatesAutoresizingMaskIntoConstraints="NO" id="Ie9-TK-U1b">
+                                                    <rect key="frame" x="36" y="21" width="45" height="54"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" red="0.21423142140000001" green="0.66722063789999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="TlZ-G4-MuM"/>
+                                                        <constraint firstAttribute="height" constant="45" id="Yox-Nr-sFm"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No te automediques" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzq-dr-e0R">
+                                                    <rect key="frame" x="89" y="37.666666666666664" width="280" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dzq-dr-e0R" secondAttribute="trailing" constant="25" id="2hX-HL-NMc"/>
+                                                <constraint firstItem="dzq-dr-e0R" firstAttribute="leading" secondItem="Ie9-TK-U1b" secondAttribute="trailing" constant="8" id="7yW-IW-fhT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ie9-TK-U1b" secondAttribute="bottom" constant="10" id="G5Q-vP-jxI"/>
+                                                <constraint firstItem="dzq-dr-e0R" firstAttribute="centerY" secondItem="Ie9-TK-U1b" secondAttribute="centerY" id="IOh-Mb-6sW"/>
+                                                <constraint firstItem="Ie9-TK-U1b" firstAttribute="leading" secondItem="Lfe-Lx-Olg" secondAttribute="leadingMargin" constant="16" id="MCs-fT-Zmd"/>
+                                                <constraint firstItem="dzq-dr-e0R" firstAttribute="height" secondItem="Ie9-TK-U1b" secondAttribute="height" multiplier="0.388889" id="c5i-dp-WG9"/>
+                                                <constraint firstItem="Ie9-TK-U1b" firstAttribute="top" secondItem="Lfe-Lx-Olg" secondAttribute="topMargin" constant="10" id="n4n-4j-X1q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dRc-2p-dzN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Mps-dS-tYp"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOW-TY-2Fo" customClass="IAGradientButton" customModule="BeCareful" customModuleProvider="target">
+                                <rect key="frame" x="50" y="612" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Dgt-4w-Fgo"/>
+                                    <constraint firstAttribute="height" constant="50" id="PGD-be-G59"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" image="phone.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="initialGradientColor">
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endGradientColor">
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comunicarme telefónicamente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ree-5b-DR8">
+                                <rect key="frame" x="120" y="624.66666666666663" width="269" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="cA3-wX-Roj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qoN-tV-nSi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="24M-sd-65J"/>
+                            <constraint firstItem="nOW-TY-2Fo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="4i4-g0-Opn"/>
+                            <constraint firstItem="qoN-tV-nSi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="71V-n9-ttU"/>
+                            <constraint firstItem="nOW-TY-2Fo" firstAttribute="top" secondItem="qoN-tV-nSi" secondAttribute="bottom" constant="20" id="CDR-Ii-uL6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eBJ-bT-fDr" secondAttribute="trailing" constant="30" id="IXg-Md-SmW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nOW-TY-2Fo" secondAttribute="bottom" constant="25" id="Nnf-Q3-HCk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ree-5b-DR8" secondAttribute="trailing" constant="25" id="V0p-XS-ukp"/>
+                            <constraint firstItem="ree-5b-DR8" firstAttribute="leading" secondItem="nOW-TY-2Fo" secondAttribute="trailing" constant="20" id="VnD-5Q-ZkD"/>
+                            <constraint firstItem="ree-5b-DR8" firstAttribute="centerY" secondItem="nOW-TY-2Fo" secondAttribute="centerY" id="WL0-vt-ihO"/>
+                            <constraint firstItem="qoN-tV-nSi" firstAttribute="top" secondItem="eBJ-bT-fDr" secondAttribute="bottom" constant="30" id="dC8-gf-4wd"/>
+                            <constraint firstItem="eBJ-bT-fDr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="eIT-db-Bj9"/>
+                            <constraint firstItem="eBJ-bT-fDr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hM2-RR-hj9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="heart.fill" catalog="system" id="zt0-Op-cWn">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="recomendationsList" destination="qoN-tV-nSi" id="oZE-s2-ZYy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="466.304347826087"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coverageMedicines" width="42" height="42"/>
+        <image name="heart.fill" catalog="system" width="64" height="54"/>
+        <image name="phone.fill" catalog="system" width="64" height="56"/>
+    </resources>
+</document>

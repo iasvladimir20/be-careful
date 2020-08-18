@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>812412756547-hb6usihl071kqnf6jm5tun1l61fut3ls.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.812412756547-hb6usihl071kqnf6jm5tun1l61fut3ls</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDhrBkM7C3Ta7qEY1HPxrrMegMGrAkvN0I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>812412756547</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ia.enterprise.BeCareful</string>
+	<key>PROJECT_ID</key>
+	<string>covid-19-app-50180</string>
+	<key>STORAGE_BUCKET</key>
+	<string>covid-19-app-50180.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:812412756547:ios:77de938172a08c2a4eeaf6</string>
+	<key>DATABASE_URL</key>
+	<string>https://covid-19-app-50180.firebaseio.com</string>
+</dict>
+</plist>

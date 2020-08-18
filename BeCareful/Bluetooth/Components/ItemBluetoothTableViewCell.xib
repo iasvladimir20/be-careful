@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemBluetoothTableViewCell" rowHeight="54" id="KGk-i7-Jjw" customClass="ItemBluetoothTableViewCell" customModule="BeCareful" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="329" height="54"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPN-np-RoJ">
+                        <rect key="frame" x="5" y="5" width="319" height="44"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="O2k-zk-16v">
+                                <rect key="frame" x="8" y="8" width="36" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="VHQ-KL-K6X"/>
+                                    <constraint firstAttribute="height" constant="28" id="rOB-Of-vFB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNA-AY-Jy6">
+                                <rect key="frame" x="52" y="12" width="267" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="O2k-zk-16v" secondAttribute="bottom" constant="8" id="62b-Ja-D7Z"/>
+                            <constraint firstItem="jNA-AY-Jy6" firstAttribute="leading" secondItem="O2k-zk-16v" secondAttribute="trailing" constant="8" id="GPU-bm-ABt"/>
+                            <constraint firstItem="jNA-AY-Jy6" firstAttribute="centerY" secondItem="O2k-zk-16v" secondAttribute="centerY" id="KST-S4-7aa"/>
+                            <constraint firstAttribute="trailing" secondItem="jNA-AY-Jy6" secondAttribute="trailing" id="Pgl-zP-40b"/>
+                            <constraint firstItem="O2k-zk-16v" firstAttribute="top" secondItem="PPN-np-RoJ" secondAttribute="top" constant="8" id="QUf-UE-rN5"/>
+                            <constraint firstItem="O2k-zk-16v" firstAttribute="leading" secondItem="PPN-np-RoJ" secondAttribute="leading" constant="8" id="byM-da-VyR"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0014950785160000001" green="0.060075196720000001" blue="0.12202134000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="PPN-np-RoJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="0OI-0F-FCt"/>
+                    <constraint firstAttribute="trailing" secondItem="PPN-np-RoJ" secondAttribute="trailing" constant="5" id="O6N-4y-UXS"/>
+                    <constraint firstItem="PPN-np-RoJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="aU6-ul-Vda"/>
+                    <constraint firstAttribute="bottom" secondItem="PPN-np-RoJ" secondAttribute="bottom" constant="5" id="tFA-d9-HAF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="deviceName" destination="jNA-AY-Jy6" id="CHJ-41-WiQ"/>
+            </connections>
+            <point key="canvasLocation" x="144.20289855072465" y="106.47321428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="defaultAvatar" width="73" height="73"/>
+    </resources>
+</document>
