@@ -12,5 +12,12 @@ El presente repositorio se puede clonar mediante *HTTPS* o *SSH*.
 ### Arquitectura del proyecto
 Swift Clean
 
+## Inicio del proyecto
+01 de Abril del 2020
+
+
+## Descripción
+Una aplicación elaborada en IA Interactive para poder combatir al COVID-19
+
 ##
 ©2020 IA interactive®
