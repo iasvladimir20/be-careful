@@ -8,5 +8,9 @@ El presente repositorio contiene el desarrollo de la aplicación móvil de Be Ca
 ## Instalación y configuración
 ### Clonación del repositorio.
 El presente repositorio se puede clonar mediante *HTTPS* o *SSH*.
+
+### Arquitectura del proyecto
+Swift Clean
+
 ##
 ©2019 IA interactive®
