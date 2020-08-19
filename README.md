@@ -13,4 +13,4 @@ El presente repositorio se puede clonar mediante *HTTPS* o *SSH*.
 Swift Clean
 
 ##
-©2019 IA interactive®
+©2020 IA interactive®
