@@ -13,7 +13,8 @@
 import UIKit
 
 protocol RegisterBusinessLogic {
-    func doSomething(request: Register.Something.Request)
+    func validatePhone(request: Register.Phone.Request)
+    func showError()
 }
 
 protocol RegisterDataStore {
@@ -22,16 +23,26 @@ protocol RegisterDataStore {
 
 class RegisterInteractor: RegisterBusinessLogic, RegisterDataStore {
     var presenter: RegisterPresentationLogic?
-    var worker: RegisterWorker?
+    lazy var worker: RegisterWorker = RegisterWorker()
+    private var idDevice: String = UIDevice.current.identifierForVendor!.uuidString
+    
     //var name: String = ""
 
-    // MARK: Do something
+    // MARK: Validate phone
 
-    func doSomething(request: Register.Something.Request) {
+    func validatePhone(request: Register.Phone.Request) {
         worker = RegisterWorker()
-        worker?.doSomeWork()
-
-        let response = Register.Something.Response()
-        presenter?.presentSomething(response: response)
+        switch worker.validatePhone(phoneNumber: request.phoneNumber) {
+        case true:
+            let response = Register.Phone.Response()
+            presenter?.presentVerifyCode(response: response)
+        case false:
+            showError()
+        }
+    }
+    
+    func showError() {
+        presenter?.presentError()
     }
 }
+

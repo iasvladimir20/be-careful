@@ -15,9 +15,9 @@ import UIKit
 enum Register {
   // MARK: Use cases
   
-  enum Something {
+  enum Phone {
     struct Request {
-        
+        var phoneNumber: String?
     }
     struct Response {
         

@@ -12,7 +12,8 @@ class RegisterWorker {
 
     // MARK: - Public Methods
 
-    func validatePhone(phoneNumber: String) -> Bool {
+    func validatePhone(phoneNumber: String?) -> Bool {
+        guard let phoneNumber = phoneNumber else { return false }
         let phoneNumberRegex = "^[0-9]{10}$"
         let trimmedString = phoneNumber.trimmingCharacters(in: .whitespaces)
         let validate = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)

@@ -13,16 +13,21 @@
 import UIKit
 
 protocol RegisterPresentationLogic {
-    func presentSomething(response: Register.Something.Response)
+    func presentVerifyCode(response: Register.Phone.Response)
+    func presentError()
 }
 
 class RegisterPresenter: RegisterPresentationLogic {
     weak var viewController: RegisterDisplayLogic?
 
-    // MARK: Do something
+    // MARK: Display Verify Code
 
-    func presentSomething(response: Register.Something.Response) {
-        let viewModel = Register.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentVerifyCode(response: Register.Phone.Response) {
+        let viewModel = Register.Phone.ViewModel()
+        viewController?.displayVerifyCode(viewModel: viewModel)
+    }
+    
+    func presentError() {
+        viewController?.showError()
     }
 }

@@ -13,7 +13,8 @@
 import UIKit
 
 protocol RegisterDisplayLogic: class {
-    func displaySomething(viewModel: Register.Something.ViewModel)
+    func displayVerifyCode(viewModel: Register.Phone.ViewModel)
+    func showError()
 }
 
 class RegisterViewController: UIViewController, RegisterDisplayLogic {
@@ -68,18 +69,34 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        setupTextField()
     }
 
-    // MARK: Do something
+    // MARK: Register 
 
-    func doSomething() {
-        let request = Register.Something.Request()
-        interactor?.doSomething(request: request)
+    @IBAction func sendRegister(_ sender: Any) {
+        validateData()
+    }
+    
+    func validateData() {
+        let phone = phoneNumber.text
+        let request = Register.Phone.Request(phoneNumber: phone)
+        interactor?.validatePhone(request: request)
     }
 
-    func displaySomething(viewModel: Register.Something.ViewModel) {
-    //nameTextField.text = viewModel.name
+    func displayVerifyCode(viewModel: Register.Phone.ViewModel) {
+        let storyboard = UIStoryboard.register
+        guard let formVC = storyboard.instantiateViewController(withIdentifier: "verifyCode") as? VerifyCodeViewController else { return }
+        navigationController?.pushViewController(formVC, animated: true)
+    }
+    
+    func showError() {
+        error.isHidden = false
+        separator.backgroundColor = .red
+    }
+    
+    func setupTextField() {
+        phoneNumber.delegate = self
     }
 }
 
