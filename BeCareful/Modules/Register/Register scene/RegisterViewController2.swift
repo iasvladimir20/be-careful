@@ -28,7 +28,7 @@ class RegisterViewController: UIViewController {
     // MARK: - Actions
     @IBAction func sendRegister(_ sender: UIButton) {
         guard let phoneNumber = phoneNumber.text else {
-            showError()
+            showError() 
             return
         }
 
